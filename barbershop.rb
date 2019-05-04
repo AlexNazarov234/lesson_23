@@ -11,7 +11,7 @@ post '/' do
 	@master = params[:master]
 	
 	@title = 'Thanks'
-	@message = "Dear #{@user_name}, we'll be waiting for you at #{@date_time} to #{@master}"
+	@message = "Dear #{@user_name}, we'll be waiting for you at #{@date_time} to Master: #{@master}"
 	
 	f = File.open 'users.txt', 'a'
 	f.write "User: #{@user_name}, Phone: #{@phone}, Date and Time: #{@date_time}, Master: #{@master}\n"
